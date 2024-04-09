@@ -1,0 +1,36 @@
+@startuml UML_Iphone
+interface ReprodutorMusica {
+  + tocar()
+  + pausar()
+  + selecionarMusica()
+}
+
+interface AparelhoCelular {
+  + ligar()
+  + atender()
+  + iniciarCorreioVoz()
+}
+
+interface Navegador {
+  + exibirPagina()
+  + adicionarNovaAba()
+  + atualizarPagina()
+}
+
+class IPhone {
+  + tocar()
+  + pausar()
+  + selecionarMusica()
+  + ligar()
+  + atender()
+  + iniciarCorreioVoz()
+  + exibirPagina()
+  + adicionarNovaAba()
+  + atualizarPagina()
+}
+
+IPhone ..|> ReprodutorMusica
+IPhone ..|> AparelhoCelular
+IPhone ..|> Navegador
+
+@enduml
